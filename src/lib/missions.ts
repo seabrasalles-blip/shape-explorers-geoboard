@@ -97,17 +97,6 @@ export const MISSIONS: Mission[] = [
     ),
   },
   {
-    id: 7,
-    title: "Missão 7 – O losango inclinado",
-    goal: "Construa um losango (4 lados iguais, sem ser um quadrado).",
-    hint: "4 lados iguais, mas nenhum ângulo precisa ser reto.",
-    validate: (p) => need(
-      isRhombus(p),
-      "Ótimo! É um losango: 4 lados iguais e ângulos não retos.",
-      "Esse não é um losango. Os 4 lados devem ser iguais e a figura não pode ser um quadrado."
-    ),
-  },
-  {
     id: 8,
     title: "Missão 8 – O trapézio",
     goal: "Construa um trapézio (apenas 1 par de lados paralelos).",
