@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+          bg: "hsl(var(--success-bg))",
+        },
+        "destructive-bg": "hsl(var(--destructive-bg))",
+        "primary-glow": "hsl(var(--primary-glow))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -97,15 +104,6 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "shake": "shake 0.4s ease-in-out",
         "fade-in": "fade-in 0.4s ease-out",
-      },
-      colors: {
-        success: {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
-          bg: "hsl(var(--success-bg))",
-        },
-        "destructive-bg": "hsl(var(--destructive-bg))",
-        "primary-glow": "hsl(var(--primary-glow))",
       },
     },
   },
