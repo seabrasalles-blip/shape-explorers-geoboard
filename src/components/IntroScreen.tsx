@@ -1,7 +1,7 @@
-import capa from "/assets/capa.png";
-import coruja from "/assets/coruja.png";
-import reiniciarImg from "/assets/reiniciar.png";
-import proximaImg from "/assets/proxima.png";
+const capa = "/assets/capa.png";
+const coruja = "/assets/coruja.png";
+const reiniciarImg = "/assets/reiniciar.png";
+const proximaImg = "/assets/proxima.png";
 
 type Props = {
   variant: "intro" | "final";

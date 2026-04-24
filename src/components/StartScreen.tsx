@@ -1,5 +1,5 @@
-import fundo from "/assets/fundo.png";
-import coruja from "/assets/coruja.png";
+const fundo = "/assets/fundo.png";
+const coruja = "/assets/coruja.png";
 
 type Props = { onStart: () => void };
 

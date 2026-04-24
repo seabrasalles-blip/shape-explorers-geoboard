@@ -1,10 +1,10 @@
 import { useState } from "react";
-import capa from "/assets/capa.png";
-import desfazerImg from "/assets/desfazer.png";
-import limparImg from "/assets/limpar.png";
-import verificarImg from "/assets/verificar.png";
-import proximaImg from "/assets/proxima.png";
-import reiniciarImg from "/assets/reiniciar.png";
+const capa = "/assets/capa.png";
+const desfazerImg = "/assets/desfazer.png";
+const limparImg = "/assets/limpar.png";
+const verificarImg = "/assets/verificar.png";
+const proximaImg = "/assets/proxima.png";
+const reiniciarImg = "/assets/reiniciar.png";
 
 import { Geoboard } from "./Geoboard";
 import { MissionPanel } from "./MissionPanel";
