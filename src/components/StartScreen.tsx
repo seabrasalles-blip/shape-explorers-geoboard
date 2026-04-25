@@ -29,7 +29,7 @@ export const StartScreen = ({ onStart }: Props) => {
 
           <button
             onClick={onStart}
-            className="mt-10 inline-flex items-center gap-3 bg-secondary text-secondary-foreground font-display text-2xl px-10 py-4 rounded-full shadow-soft border-4 border-white/80 hover:scale-105 active:scale-95 transition-transform animate-float"
+            className="mt-10 inline-flex items-center gap-3 bg-secondary text-secondary-foreground font-display text-2xl px-10 py-4 rounded-full shadow-soft border-4 border-white/80 hover:scale-105 active:scale-95"
           >
             ▶ Começar
           </button>
@@ -40,7 +40,7 @@ export const StartScreen = ({ onStart }: Props) => {
       <img
         src={coruja}
         alt="Coruja guia"
-        className="absolute bottom-0 left-4 w-56 h-auto drop-shadow-2xl pointer-events-none select-none"
+        className="absolute bottom-0 left-4 w-80 h-auto drop-shadow-2xl pointer-events-none select-none"
         draggable={false}
       />
     </div>
