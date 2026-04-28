@@ -9,10 +9,10 @@ type Props = {
 };
 
 const INTRO_TEXT =
-  "Olá, explorador! Eu sou a Coruja Geo. No geoplano você cria figuras clicando nos pontos. Cada missão pede um polígono diferente: triângulos, quadrados, retângulos, losangos, trapézios e até hexágonos! Observe lados, vértices e ângulos retos. Pronto para começar?";
+  "Olá! Eu sou a Coruja Geo. No geoplano você cria figuras clicando nos pontos. Cada missão pede um polígono diferente: triângulos, quadrados, retângulos, losangos, trapézios e até hexágonos! Observe lados, vértices e ângulos retos. Pronto para começar?";
 
 const FINAL_TEXT =
-  "Parabéns, explorador! Você completou todas as 14 missões e dominou os polígonos: lados, vértices, ângulos retos e suas propriedades. Você é oficialmente um Explorador das Formas! Quer reviver a aventura desde o início?";
+  "Parabéns! Você completou todas as missões e dominou os polígonos: lados, vértices, ângulos retos e suas propriedades. Você sabe explorar as formas! Quer reviver a aventura desde o início?";
 
 export const IntroScreen = ({ variant, onAdvance }: Props) => {
   const isFinal = variant === "final";
