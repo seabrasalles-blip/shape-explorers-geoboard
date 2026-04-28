@@ -56,7 +56,7 @@ export const IntroScreen = ({ variant, onAdvance }: Props) => {
             />
 
             <h2 className={`font-display text-3xl mb-3 ${isFinal ? "text-success" : "text-primary"}`}>
-              {isFinal ? "🏆 Missão Cumprida!" : "👋 Bem-vindo!"}
+              {isFinal ? "🏆 Missão Cumprida!" : "👋 Vamos começar?"}
             </h2>
             <p className="text-foreground text-lg leading-relaxed">{text}</p>
 
