@@ -97,8 +97,8 @@ export const MISSIONS: Mission[] = [
     ),
   },
   {
-    id: 8,
-    title: "Missão 8 – O trapézio",
+    id: 7,
+    title: "Missão 7 – O trapézio",
     goal: "Construa um trapézio (apenas 1 par de lados paralelos).",
     hint: "Só um par de lados paralelos – os outros dois não.",
     validate: (p) => need(
@@ -108,8 +108,8 @@ export const MISSIONS: Mission[] = [
     ),
   },
   {
-    id: 9,
-    title: "Missão 9 – O pentágono",
+    id: 8,
+    title: "Missão 8 – O pentágono",
     goal: "Construa um polígono com 5 lados (pentágono).",
     hint: "5 vértices, 5 lados, sem cruzamentos.",
     validate: (p) => need(
@@ -119,8 +119,8 @@ export const MISSIONS: Mission[] = [
     ),
   },
   {
-    id: 10,
-    title: "Missão 10 – O hexágono",
+    id: 9,
+    title: "Missão 9 – O hexágono",
     goal: "Construa um polígono com 6 lados (hexágono).",
     hint: "6 vértices, 6 lados, sem cruzamentos.",
     validate: (p) => need(
@@ -130,8 +130,8 @@ export const MISSIONS: Mission[] = [
     ),
   },
   {
-    id: 11,
-    title: "Missão 11 – Quadrilátero sem ângulos retos",
+    id: 10,
+    title: "Missão 10 – Quadrilátero sem ângulos retos",
     goal: "Construa um quadrilátero sem nenhum ângulo reto.",
     hint: "4 lados, mas nenhum cantinho em L.",
     validate: (p) => {
@@ -141,8 +141,8 @@ export const MISSIONS: Mission[] = [
     },
   },
   {
-    id: 12,
-    title: "Missão 12 – Retângulo grande",
+    id: 11,
+    title: "Missão 11 – Retângulo grande",
     goal: "Construa um retângulo com pelo menos 6 unidades de comprimento em um dos lados.",
     hint: "Um retângulo bem alongado.",
     validate: (p) => {
@@ -153,8 +153,8 @@ export const MISSIONS: Mission[] = [
     },
   },
   {
-    id: 13,
-    title: "Missão 13 – Triângulo isósceles",
+    id: 12,
+    title: "Missão 12 – Triângulo isósceles",
     goal: "Construa um triângulo com pelo menos 2 lados iguais.",
     hint: "Dois lados do mesmo tamanho.",
     validate: (p) => {
@@ -167,8 +167,8 @@ export const MISSIONS: Mission[] = [
     },
   },
   {
-    id: 14,
-    title: "Missão 14 – Polígono com 4 ângulos retos",
+    id: 13,
+    title: "Missão 13 – Polígono com 4 ângulos retos",
     goal: "Construa um polígono com exatamente 4 ângulos retos (pode ser quadrado ou retângulo).",
     hint: "Quadrado ou retângulo!",
     validate: (p) => {
