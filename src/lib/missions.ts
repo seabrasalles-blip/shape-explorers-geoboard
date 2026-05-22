@@ -165,29 +165,4 @@ export const MISSIONS: Mission[] = [
       return need(r === 4, "Excelente! Polígono com exatamente 4 ângulos retos. Você completou todas as missões!", `Esse polígono tem ${r} ângulo(s) reto(s). Precisamos de exatamente 4.`);
     },
   },
-  {
-    id: 12,
-    title: "Missão 12 – Triângulo isósceles",
-    goal: "Construa um triângulo com pelo menos 2 lados iguais.",
-    hint: "Dois lados do mesmo tamanho.",
-    validate: (p) => {
-      if (!isTriangle(p)) return { ok: false, message: "Primeiro construa um triângulo." };
-      const a = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
-      const b = Math.hypot(p[1].x - p[2].x, p[1].y - p[2].y);
-      const c = Math.hypot(p[2].x - p[0].x, p[2].y - p[0].y);
-      const eq = (x: number, y: number) => Math.abs(x - y) < 1e-4;
-      return need(eq(a, b) || eq(b, c) || eq(a, c), "Boa! Esse triângulo é isósceles (pelo menos 2 lados iguais).", "Esse triângulo não é isósceles. Tente novamente com 2 lados iguais.");
-    },
-  },
-  {
-    id: 13,
-    title: "Missão 13 – Polígono com 4 ângulos retos",
-    goal: "Construa um polígono com exatamente 4 ângulos retos (pode ser quadrado ou retângulo).",
-    hint: "Quadrado ou retângulo!",
-    validate: (p) => {
-      if (countSides(p) < 4) return { ok: false, message: "Construa um polígono com pelo menos 4 lados." };
-      const r = countRightAngles(p);
-      return need(r === 4, "Excelente! Polígono com exatamente 4 ângulos retos. Você completou todas as missões!", `Esse polígono tem ${r} ângulo(s) reto(s). Precisamos de exatamente 4.`);
-    },
-  },
 ];
