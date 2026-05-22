@@ -142,14 +142,27 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 11,
-    title: "Missão 11 – Retângulo grande",
-    goal: "Construa um retângulo com pelo menos 6 unidades de comprimento em um dos lados.",
-    hint: "Um retângulo bem alongado.",
+    title: "Missão 11 – Triângulo isósceles",
+    goal: "Construa um triângulo com pelo menos 2 lados iguais.",
+    hint: "Dois lados do mesmo tamanho.",
     validate: (p) => {
-      if (!isRectangle(p)) return { ok: false, message: "Esse não é um retângulo. Revise os ângulos e lados." };
-      const lens = [0, 1, 2, 3].map(i => Math.hypot(p[i].x - p[(i + 1) % 4].x, p[i].y - p[(i + 1) % 4].y));
-      const maxLen = Math.max(...lens);
-      return need(maxLen >= 6 - 1e-6, `Excelente! Seu retângulo tem ${maxLen.toFixed(0)} unidades no maior lado.`, `Esse retângulo tem ${maxLen.toFixed(0)} unidades no maior lado. Precisa de pelo menos 6.`);
+      if (!isTriangle(p)) return { ok: false, message: "Primeiro construa um triângulo." };
+      const a = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+      const b = Math.hypot(p[1].x - p[2].x, p[1].y - p[2].y);
+      const c = Math.hypot(p[2].x - p[0].x, p[2].y - p[0].y);
+      const eq = (x: number, y: number) => Math.abs(x - y) < 1e-4;
+      return need(eq(a, b) || eq(b, c) || eq(a, c), "Boa! Esse triângulo é isósceles (pelo menos 2 lados iguais).", "Esse triângulo não é isósceles. Tente novamente com 2 lados iguais.");
+    },
+  },
+  {
+    id: 12,
+    title: "Missão 12 – Polígono com 4 ângulos retos",
+    goal: "Construa um polígono com exatamente 4 ângulos retos (pode ser quadrado ou retângulo).",
+    hint: "Quadrado ou retângulo!",
+    validate: (p) => {
+      if (countSides(p) < 4) return { ok: false, message: "Construa um polígono com pelo menos 4 lados." };
+      const r = countRightAngles(p);
+      return need(r === 4, "Excelente! Polígono com exatamente 4 ângulos retos. Você completou todas as missões!", `Esse polígono tem ${r} ângulo(s) reto(s). Precisamos de exatamente 4.`);
     },
   },
   {
