@@ -80,7 +80,7 @@ export const GameScreen = ({ onFinish }: Props) => {
 
   const handleAdvance = () => {
     if (isLastMission) {
-      // Missão 14 concluída → vai para tela final
+      // Última missão concluída → vai para tela final
       onFinish();
       return;
     }
