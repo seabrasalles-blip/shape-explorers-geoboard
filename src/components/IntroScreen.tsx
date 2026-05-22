@@ -9,16 +9,16 @@ type Props = {
 };
 
 const INTRO_TEXT =
-  "Olá! Eu sou a Coruja Geo. No geoplano você cria figuras clicando nos pontos. Cada missão pede um polígono diferente: triângulos, quadrados, retângulos, losangos, trapézios e até hexágonos! Observe lados, vértices e ângulos retos. Venha comigo!";
+  "Olá! Eu sou a Coruja Geo. No geoplano você cria figuras clicando nos pontos. Cada tarefa pede um polígono diferente: triângulos, quadrados, retângulos, losangos, trapézios e até hexágonos! Observe lados, vértices e ângulos retos. Venha comigo!";
 
 const FINAL_TEXT =
-  "Parabéns! Você completou todas as missões e dominou os polígonos: lados, vértices, ângulos retos e suas propriedades. Você sabe explorar as formas! Quer reviver a aventura desde o início?";
+  "Parabéns! Você completou todas as tarefas e dominou os polígonos: lados, vértices, ângulos retos e suas propriedades. Você sabe explorar as formas! Quer reviver a aventura desde o início?";
 
 export const IntroScreen = ({ variant, onAdvance }: Props) => {
   const isFinal = variant === "final";
   const text = isFinal ? FINAL_TEXT : INTRO_TEXT;
   const buttonImg = isFinal ? reiniciarImg : proximaImg;
-  const buttonAlt = isFinal ? "Reiniciar missão" : "Iniciar missão";
+  const buttonAlt = isFinal ? "Reiniciar tarefa" : "Iniciar tarefa";
 
   return (
     <div
@@ -56,7 +56,7 @@ export const IntroScreen = ({ variant, onAdvance }: Props) => {
             />
 
             <h2 className={`font-display text-3xl mb-3 ${isFinal ? "text-success" : "text-primary"}`}>
-              {isFinal ? "🏆 Missão Cumprida!" : "👋 Vamos começar?"}
+              {isFinal ? "🏆 Tarefa Cumprida!" : "👋 Vamos começar?"}
             </h2>
             <p className="text-foreground text-lg leading-relaxed">{text}</p>
 

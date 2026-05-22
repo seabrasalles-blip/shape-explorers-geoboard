@@ -32,7 +32,7 @@ const need = (cond: boolean, ok: string, fail: string): ValidationResult =>
 export const MISSIONS: Mission[] = [
   {
     id: 1,
-    title: "Missão 1 – O primeiro triângulo",
+    title: "Tarefa 1 – O primeiro triângulo",
     goal: "Construa um triângulo qualquer no geoplano.",
     hint: "Lembre: 3 vértices e 3 lados.",
     validate: (p) => need(
@@ -43,7 +43,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 2,
-    title: "Missão 2 – Triângulo retângulo",
+    title: "Tarefa 2 – Triângulo retângulo",
     goal: "Construa um triângulo que tenha 1 ângulo reto.",
     hint: "Um cantinho deve formar um L perfeito.",
     validate: (p) => need(
@@ -54,7 +54,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 3,
-    title: "Missão 3 – Quadrilátero livre",
+    title: "Tarefa 3 – Quadrilátero livre",
     goal: "Construa um quadrilátero qualquer (4 lados).",
     hint: "Qualquer figura fechada com 4 vértices.",
     validate: (p) => need(
@@ -65,7 +65,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 4,
-    title: "Missão 4 – Caça aos ângulos retos",
+    title: "Tarefa 4 – Caça aos ângulos retos",
     goal: "Construa um quadrilátero com pelo menos 2 ângulos retos.",
     hint: "Pelo menos dois cantinhos em forma de L.",
     validate: (p) => {
@@ -76,7 +76,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 5,
-    title: "Missão 5 – O retângulo",
+    title: "Tarefa 5 – O retângulo",
     goal: "Construa um retângulo (4 ângulos retos, lados opostos iguais e diferentes).",
     hint: "Lados opostos iguais, mas não todos iguais.",
     validate: (p) => need(
@@ -87,7 +87,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 6,
-    title: "Missão 6 – O quadrado",
+    title: "Tarefa 6 – O quadrado",
     goal: "Construa um quadrado (4 lados iguais e 4 ângulos retos).",
     hint: "É um retângulo com todos os lados iguais.",
     validate: (p) => need(
@@ -98,7 +98,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 7,
-    title: "Missão 7 – O trapézio",
+    title: "Tarefa 7 – O trapézio",
     goal: "Construa um trapézio (apenas 1 par de lados paralelos).",
     hint: "Só um par de lados paralelos – os outros dois não.",
     validate: (p) => need(
@@ -109,7 +109,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 8,
-    title: "Missão 8 – O pentágono",
+    title: "Tarefa 8 – O pentágono",
     goal: "Construa um polígono com 5 lados (pentágono).",
     hint: "5 vértices, 5 lados, sem cruzamentos.",
     validate: (p) => need(
@@ -120,7 +120,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 9,
-    title: "Missão 9 – O hexágono",
+    title: "Tarefa 9 – O hexágono",
     goal: "Construa um polígono com 6 lados (hexágono).",
     hint: "6 vértices, 6 lados, sem cruzamentos.",
     validate: (p) => need(
@@ -131,7 +131,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 10,
-    title: "Missão 10 – Quadrilátero sem ângulos retos",
+    title: "Tarefa 10 – Quadrilátero sem ângulos retos",
     goal: "Construa um quadrilátero sem nenhum ângulo reto.",
     hint: "4 lados, mas nenhum cantinho em L.",
     validate: (p) => {
@@ -142,7 +142,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 11,
-    title: "Missão 11 – Triângulo isósceles",
+    title: "Tarefa 11 – Triângulo isósceles",
     goal: "Construa um triângulo com pelo menos 2 lados iguais.",
     hint: "Dois lados do mesmo tamanho.",
     validate: (p) => {
@@ -156,13 +156,13 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 12,
-    title: "Missão 12 – Polígono com 4 ângulos retos",
+    title: "Tarefa 12 – Polígono com 4 ângulos retos",
     goal: "Construa um polígono com exatamente 4 ângulos retos (pode ser quadrado ou retângulo).",
     hint: "Quadrado ou retângulo!",
     validate: (p) => {
       if (countSides(p) < 4) return { ok: false, message: "Construa um polígono com pelo menos 4 lados." };
       const r = countRightAngles(p);
-      return need(r === 4, "Excelente! Polígono com exatamente 4 ângulos retos. Você completou todas as missões!", `Esse polígono tem ${r} ângulo(s) reto(s). Precisamos de exatamente 4.`);
+      return need(r === 4, "Excelente! Polígono com exatamente 4 ângulos retos. Você completou todas as tarefas!", `Esse polígono tem ${r} ângulo(s) reto(s). Precisamos de exatamente 4.`);
     },
   },
 ];

@@ -27,7 +27,7 @@ export const StartScreen = ({ onStart }: Props) => {
 </h1>
 
 <p className="font-display text-3xl mt-4 text-primary [text-shadow:0_2px_0_rgba(255,255,255,0.75),0_4px_0_rgba(0,0,0,0.16)]">
-  Missão Geoplano
+  Tarefa Geoplano
 </p>
           <button
             onClick={onStart}

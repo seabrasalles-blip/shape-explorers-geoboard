@@ -11,7 +11,7 @@ export const MissionPanel = ({ mission, index, total }: Props) => {
     <div className="rounded-2xl bg-card border-4 border-primary/20 shadow-card p-4 animate-fade-in">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-bold uppercase tracking-wider text-primary bg-accent px-2 py-1 rounded-full">
-          Missão {index + 1} de {total}
+          Tarefa {index + 1} de {total}
         </span>
         <div className="flex gap-1">
           {Array.from({ length: total }).map((_, i) => (
