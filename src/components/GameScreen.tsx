@@ -80,7 +80,7 @@ export const GameScreen = ({ onFinish }: Props) => {
 
   const handleAdvance = () => {
     if (isLastMission) {
-      // Última missão concluída → vai para tela final
+      // Última tarefa concluída → vai para tela final
       onFinish();
       return;
     }
@@ -88,9 +88,9 @@ export const GameScreen = ({ onFinish }: Props) => {
     resetCanvas();
   };
 
-  // Conforme as regras: na última missão, após acertar, o MESMO botão muda para "Reiniciar missão" (visual)
+  // Conforme as regras: na última tarefa, após acertar, o MESMO botão muda para "Reiniciar tarefa" (visual)
   const advanceButtonImg = isLastMission && missionSolved ? reiniciarImg : proximaImg;
-  const advanceButtonAlt = isLastMission && missionSolved ? "Reiniciar missão" : "Próxima";
+  const advanceButtonAlt = isLastMission && missionSolved ? "Reiniciar tarefa" : "Próxima";
 
   return (
     <div
@@ -107,7 +107,7 @@ export const GameScreen = ({ onFinish }: Props) => {
               Exploradores das Formas
             </h2>
             <div className="bg-card/95 rounded-full px-4 py-1.5 text-sm font-bold text-primary shadow-card">
-              Missão {missionIdx + 1}/{MISSIONS.length}
+              Tarefa {missionIdx + 1}/{MISSIONS.length}
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export const GameScreen = ({ onFinish }: Props) => {
           </div>
         </div>
 
-        {/* Coluna direita: missão + stats + feedback */}
+        {/* Coluna direita: tarefa + stats + feedback */}
         <div className="flex flex-col gap-3 justify-between py-1">
           <MissionPanel mission={mission} index={missionIdx} total={MISSIONS.length} />
           <StatsPanel
