@@ -142,19 +142,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 11,
-    title: "Missão 11 – Retângulo grande",
-    goal: "Construa um retângulo com pelo menos 6 unidades de comprimento em um dos lados.",
-    hint: "Um retângulo bem alongado.",
-    validate: (p) => {
-      if (!isRectangle(p)) return { ok: false, message: "Esse não é um retângulo. Revise os ângulos e lados." };
-      const lens = [0, 1, 2, 3].map(i => Math.hypot(p[i].x - p[(i + 1) % 4].x, p[i].y - p[(i + 1) % 4].y));
-      const maxLen = Math.max(...lens);
-      return need(maxLen >= 6 - 1e-6, `Excelente! Seu retângulo tem ${maxLen.toFixed(0)} unidades no maior lado.`, `Esse retângulo tem ${maxLen.toFixed(0)} unidades no maior lado. Precisa de pelo menos 6.`);
-    },
-  },
-  {
-    id: 12,
-    title: "Missão 12 – Triângulo isósceles",
+    title: "Missão 11 – Triângulo isósceles",
     goal: "Construa um triângulo com pelo menos 2 lados iguais.",
     hint: "Dois lados do mesmo tamanho.",
     validate: (p) => {
@@ -167,8 +155,8 @@ export const MISSIONS: Mission[] = [
     },
   },
   {
-    id: 13,
-    title: "Missão 13 – Polígono com 4 ângulos retos",
+    id: 12,
+    title: "Missão 12 – Polígono com 4 ângulos retos",
     goal: "Construa um polígono com exatamente 4 ângulos retos (pode ser quadrado ou retângulo).",
     hint: "Quadrado ou retângulo!",
     validate: (p) => {
